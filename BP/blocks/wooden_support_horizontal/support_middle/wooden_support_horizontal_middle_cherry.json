@@ -1,0 +1,98 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ff:wooden_support_horizontal_middle_cherry",
+			"properties": {
+				"n:facing": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_property('n:facing') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('n:facing') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('n:facing') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('n:facing') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		],
+		"components": {
+			"minecraft:creative_category": {
+				"category": "construction",
+				"group": "itemGroup.name.Construction"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "wooden_support_horizontal_cherry",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:map_color": "#8E693B",
+			"minecraft:destroy_time": 4,
+			"minecraft:explosion_resistance": 4,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:breathability": "solid",
+			"minecraft:flammable": {
+				"flame_odds": 30,
+				"burn_odds": 30
+			},
+			"minecraft:geometry": "geometry.wooden_support_horizontal_middle",
+			"minecraft:aim_collision": {
+	"origin": [-3.5, 0, 6],
+	"size": [7, 16, 2]
+			},
+			"minecraft:entity_collision": {
+	"origin": [-3.5, 0, 6],
+	"size": [7, 16, 2]
+			},
+			"minecraft:on_player_placing": {
+				"event": "n:set.facing"
+			}
+		},
+		"events": {
+			"n:set.facing": {
+				"set_block_property": {
+					"n:facing": "q.cardinal_facing_2d-2"
+				}
+			}
+		}
+	}
+}

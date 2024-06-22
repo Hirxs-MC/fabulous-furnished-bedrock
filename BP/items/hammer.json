@@ -1,0 +1,38 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ff:carpentry_hammer",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "hammer"
+			},
+			"minecraft:display_name": {
+				"value": "Carpentry Hammer"
+			},
+			"minecraft:creative_category": {
+				"parent": "construction"
+			},
+			"minecraft:allow_off_hand": true,
+			"minecraft:hand_equipped": true,
+			"minecraft:stacked_by_data": false,
+			"minecraft:max_stack_size": 1,
+			"minecraft:durability": {
+				"max_durability": 1000,
+				"damage_chance": {
+					"min": 1,
+					"max": 1
+				}
+			},
+			"minecraft:on_use_on": {
+				"on_use_on": {
+					"event": "ff:wood_changer",
+					"target": "block"
+				}
+			}
+		},
+		"events": {}
+	}
+}
