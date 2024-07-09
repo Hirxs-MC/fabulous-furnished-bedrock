@@ -1,0 +1,54 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ff:wooden_support_plate_jungle"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "construction",
+				"group": "itemGroup.name.Construction"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "wooden_support_horizontal_jungle",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:map_color": "#8E693B",
+			"minecraft:destroy_time": 4,
+			"minecraft:explosion_resistance": 4,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:breathability": "air",
+			"minecraft:flammable": {
+				"flame_odds": 30,
+				"burn_odds": 30
+			},
+			"minecraft:geometry": "geometry.wooden_support_horizontal_plate",
+			"minecraft:aim_collision": {
+				"origin": [
+					-8,
+					13,
+					-8
+				],
+				"size": [
+					16,
+					3,
+					16
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					13,
+					-8
+				],
+				"size": [
+					16,
+					3,
+					16
+				]
+			}
+		}
+	}
+}

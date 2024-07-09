@@ -1,0 +1,456 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ff:wooden_frames_crimson",
+			"properties": {
+				"p:facing": [
+					0,
+					1,
+					2,
+					3
+				],
+				"p:changer": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_property('p:facing') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('p:facing') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('p:facing') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('p:facing') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('p:changer') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wooden_frame_crimson",
+							"render_method": "alpha_test",
+							"geometry": "trash_1",
+							"ambient_occlusion": false
+						}
+					},
+					"minecraft:geometry": "geometry.wall_border",
+					"minecraft:aim_collision": {
+						"origin": [
+							-8,
+							14,
+							6
+						],
+						"size": [
+							16,
+							3,
+							2
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							0,
+							0,
+							0
+						],
+						"size": [
+							0,
+							0,
+							0
+						]
+					},
+					"minecraft:on_player_placing": {
+						"event": "e:set.facing"
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('p:changer') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wooden_frame_crimson",
+							"render_method": "alpha_test",
+							"geometry": "trash_2",
+							"ambient_occlusion": false
+						}
+					},
+					"minecraft:geometry": "geometry.wooden_door_frame_side_left",
+					"minecraft:aim_collision": {
+						"origin": [
+							-8,
+							0,
+							6
+						],
+						"size": [
+							2,
+							16,
+							2
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							0,
+							0,
+							0
+						],
+						"size": [
+							0,
+							0,
+							0
+						]
+					},
+					"minecraft:on_player_placing": {
+						"event": "e:set.facing"
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('p:changer') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wooden_frame_crimson",
+							"render_method": "alpha_test",
+							"geometry": "trash_2",
+							"ambient_occlusion": false
+						}
+					},
+					"minecraft:geometry": "geometry.wooden_door_frame_side_right",
+					"minecraft:aim_collision": {
+						"origin": [
+							6,
+							0,
+							6
+						],
+						"size": [
+							2,
+							16,
+							2
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							0,
+							0,
+							0
+						],
+						"size": [
+							0,
+							0,
+							0
+						]
+					},
+					"minecraft:on_player_placing": {
+						"event": "e:set.facing"
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('p:changer') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wooden_frame_crimson",
+							"render_method": "alpha_test",
+							"geometry": "trash_2",
+							"ambient_occlusion": false
+						}
+					},
+					"minecraft:geometry": "geometry.wooden_door_frame_side_double",
+					"minecraft:aim_collision": {
+						"origin": [
+							-8,
+							0,
+							6
+						],
+						"size": [
+							16,
+							4,
+							2
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							0,
+							0,
+							0
+						],
+						"size": [
+							0,
+							0,
+							0
+						]
+					},
+					"minecraft:on_player_placing": {
+						"event": "e:set.facing"
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('p:changer') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wooden_frame_crimson",
+							"render_method": "alpha_test",
+							"geometry": "trash_3",
+							"ambient_occlusion": false
+						}
+					},
+					"minecraft:geometry": "geometry.wooden_door_frame_corner_left",
+					"minecraft:aim_collision": {
+						"origin": [
+							-8,
+							12,
+							6
+						],
+						"size": [
+							16,
+							4,
+							2
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							0,
+							0,
+							0
+						],
+						"size": [
+							0,
+							0,
+							0
+						]
+					},
+					"minecraft:on_player_placing": {
+						"event": "e:set.facing"
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('p:changer') == 5",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wooden_frame_crimson",
+							"render_method": "alpha_test",
+							"geometry": "trash_3",
+							"ambient_occlusion": false
+						}
+					},
+					"minecraft:geometry": "geometry.wooden_door_frame_corner_right",
+					"minecraft:aim_collision": {
+						"origin": [
+							-8,
+							12,
+							6
+						],
+						"size": [
+							16,
+							4,
+							2
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							0,
+							0,
+							0
+						],
+						"size": [
+							0,
+							0,
+							0
+						]
+					},
+					"minecraft:on_player_placing": {
+						"event": "e:set.facing"
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('p:changer') == 6",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wooden_frame_crimson",
+							"render_method": "alpha_test",
+							"geometry": "trash_3",
+							"ambient_occlusion": false
+						}
+					},
+					"minecraft:geometry": "geometry.wooden_door_frame_corner_double",
+					"minecraft:aim_collision": {
+						"origin": [
+							-8,
+							12,
+							6
+						],
+						"size": [
+							16,
+							4,
+							2
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							0,
+							0,
+							0
+						],
+						"size": [
+							0,
+							0,
+							0
+						]
+					},
+					"minecraft:on_player_placing": {
+						"event": "e:set.facing"
+					}
+				}
+			},
+			{
+				"condition": "q.block_property('p:changer') == 7",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "wooden_frame_crimson",
+							"render_method": "alpha_test",
+							"geometry": "trash_3",
+							"ambient_occlusion": false
+						}
+					},
+					"minecraft:geometry": "geometry.wooden_door_frame_corner_middle",
+					"minecraft:aim_collision": {
+						"origin": [
+							-8,
+							12,
+							6
+						],
+						"size": [
+							16,
+							4,
+							2
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							0,
+							0,
+							0
+						],
+						"size": [
+							0,
+							0,
+							0
+						]
+					},
+					"minecraft:on_player_placing": {
+						"event": "e:set.facing"
+					}
+				}
+			}
+		],
+		"components": {
+			"minecraft:creative_category": {
+				"category": "construction",
+				"group": "itemGroup.name.Construction"
+			},
+			"minecraft:map_color": "#ffffff",
+			"minecraft:destroy_time": 4,
+			"minecraft:explosion_resistance": 4,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:breathability": "air",
+			"minecraft:flammable": {
+				"flame_odds": 30,
+				"burn_odds": 30
+			},
+			"minecraft:geometry": "geometry.wall_border",
+			"minecraft:aim_collision": {
+				"origin": [
+					-8,
+					14,
+					6
+				],
+				"size": [
+					16,
+					3,
+					2
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					0,
+					0,
+					0
+				],
+				"size": [
+					0,
+					0,
+					0
+				]
+			},
+			"minecraft:on_player_placing": {
+				"event": "e:set.facing"
+			}
+		},
+		"events": {
+			"e:set.facing": {
+				"set_block_property": {
+					"p:facing": "q.cardinal_facing_2d-2"
+				}
+			},
+			"ff:wood_changer": {
+				"set_block_property": {
+					"p:changer": "q.block_property('p:changer')==7?0:q.block_property('p:changer')+1"
+				},
+				"run_command": {
+					"command": [
+						"playsound mob.zombie.wood @p ~~~"
+					]
+				}
+			}
+		}
+	}
+}
