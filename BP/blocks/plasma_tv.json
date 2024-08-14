@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.10",
+	"format_version": "1.20.80",
 	"minecraft:block": {
 		"description": {
 			"identifier": "ff:plasma_tv",
@@ -130,6 +130,9 @@
 					3
 				]
 			},
+			"minecraft:custom_components": [
+				"ff:interactive_block"
+			],
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "lamp_off",

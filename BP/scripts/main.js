@@ -1,21 +1,21 @@
-import * as server from "@minecraft/server"
+// Stable
+import 'blocks_cc'
+import 'trampoline_cc'
+import 'pillars_cc'
+import 'fences_cc'
+import 'cooking_cc'
+import 'colors_change/lamp_colors'
+import 'colors_change/empty_paint_bucket'
+import 'colors_change/large_lamp_colors'
 
-import 'custom_components'
-import 'bounciness_test'
-import 'wooden_supports_vertical'
+
+// Experimental
 import 'tables_connect'
-import 'fences_onplayerdestroy'
-import 'fences_onplayerinteract'
-import 'fences_onplayerplaced'
-import 'test_brush'
 import 'wooden_chair_test'
-import 'stove_and_pan'
+import 'test_brush'
+import 'test_rain'
 
-server.world.afterEvents.playerPlaceBlock.subscribe(result => {
-    if (result.block.typeId == "ff:pan") {
-        result.block.dimension.spawnEntity("ff:pan_bottom_left", { x: result.block.x + 0.40, y: result.block.y, z: result.block.z + 0.60 })
-        result.block.dimension.spawnEntity("ff:pan_bottom_right", { x: result.block.x + 0.60, y: result.block.y, z: result.block.z + 0.60 })
-        result.block.dimension.spawnEntity("ff:pan_top_left", { x: result.block.x + 0.40, y: result.block.y, z: result.block.z + 0.40 })
-        result.block.dimension.spawnEntity("ff:pan_top_right", { x: result.block.x + 0.60, y: result.block.y, z: result.block.z + 0.40 })
-    }
-})
+// Unestable Experimental
+import 'couchs_double'
+import 'couchs_triple'
+import 'couch_test'

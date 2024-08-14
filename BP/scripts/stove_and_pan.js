@@ -1,7 +1,17 @@
 import * as server from "@minecraft/server"
 
+server.world.afterEvents.playerPlaceBlock.subscribe(result => {
+    if (result.block.typeId == "ff:pan") {
+        result.block.dimension.spawnEntity("ff:pan_bottom_left", { x: result.block.x + 0.40, y: result.block.y, z: result.block.z + 0.60 })
+        result.block.dimension.spawnEntity("ff:pan_bottom_right", { x: result.block.x + 0.60, y: result.block.y, z: result.block.z + 0.60 })
+        result.block.dimension.spawnEntity("ff:pan_top_left", { x: result.block.x + 0.40, y: result.block.y, z: result.block.z + 0.40 })
+        result.block.dimension.spawnEntity("ff:pan_top_right", { x: result.block.x + 0.60, y: result.block.y, z: result.block.z + 0.40 })
+    }
+})
+
+
 server.world.beforeEvents.worldInitialize.subscribe(result => {
-    result.blockTypeRegistry.registerCustomComponent("ff:rotation", {
+    result.blockComponentRegistry.registerCustomComponent("ff:rotation", {
         beforeOnPlayerPlace: result => {
             let direction = 0
             try {
@@ -16,7 +26,7 @@ server.world.beforeEvents.worldInitialize.subscribe(result => {
             result.permutationToPlace = server.BlockPermutation.resolve(result.permutationToPlace.type.id, state)
         }
     })
-    result.blockTypeRegistry.registerCustomComponent("ff:pan", {
+    result.blockComponentRegistry.registerCustomComponent("ff:pan", {
         onTick: result => {
 
             let state = result.block.permutation.getAllStates()
@@ -129,7 +139,7 @@ server.world.beforeEvents.worldInitialize.subscribe(result => {
             }
         }
     })
-    result.blockTypeRegistry.registerCustomComponent("ff:stove", {
+    result.blockComponentRegistry.registerCustomComponent("ff:stove", {
         onPlayerInteract: result => {
             let state = result.block.permutation.getAllStates()
             let item = result.player.getComponent("minecraft:equippable").getEquipment("Mainhand")

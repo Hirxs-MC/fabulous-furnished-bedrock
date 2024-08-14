@@ -1,21 +1,18 @@
 {
-	"format_version": "1.20.20",
+	"format_version": "1.21.20",
 	"minecraft:block": {
 		"description": {
 			"identifier": "ef:wooden_acacia_couch",
+			"menu_category": {
+				"category": "construction"
+			},
 			"states": {
-				"ef:office_desk_connect": {
-					"values": {
-						"min": 0,
-						"max": 4
-					}
-				},
-				"ef:rotation": {
-					"values": {
-						"min": 0,
-						"max": 3
-					}
-				},
+				"venture:arm_state": [
+					"both",
+					"left",
+					"right",
+					"none"
+				],
 				"ef:colors": {
 					"values": {
 						"min": 0,
@@ -23,23 +20,49 @@
 					}
 				}
 			},
-			"menu_category": {
-				"category": "items",
-				"group": "items"
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
 			}
 		},
 		"components": {
+			"minecraft:custom_components": [
+				"venture:chair",
+				"venture:sofa_state"
+			],
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					8,
+					16
+				]
+			},
+			"minecraft:selection_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.4
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 15
+			},
+			"minecraft:flammable": {
+				"destroy_chance_modifier": 20,
+				"catch_chance_modifier": 5
+			},
 			"minecraft:geometry": {
 				"identifier": "geometry.new_oak_couch",
 				"bone_visibility": {
-					"couch": "q.block_state('ef:office_desk_connect') == 0",
-					"couch_corner": "q.block_state('ef:office_desk_connect') == 1",
-					"couch_middle": "q.block_state('ef:office_desk_connect') == 2",
-					"couch_left": "q.block_state('ef:office_desk_connect') == 3",
-					"couch_right": "q.block_state('ef:office_desk_connect') == 4"
+					"couch_right": "q.block_state('venture:arm_state') != 'left' && q.block_state('venture:arm_state') != 'none'",
+					"couch_left": "q.block_state('venture:arm_state') != 'right' && q.block_state('venture:arm_state') != 'none'"
 				}
 			},
-			"minecraft:map_color": "#00ff00",
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "couch_base_acacia",
@@ -50,35 +73,7 @@
 					"texture": "couch_white"
 				}
 			},
-			"minecraft:flammable": {
-				"catch_chance_modifier": 5,
-				"destroy_chance_modifier": 10
-			},
-			"minecraft:queued_ticking": {
-				"looping": true,
-				"interval_range": [
-					0,
-					0
-				],
-				"on_tick": {
-					"event": "ef:office_desk_connect"
-				}
-			},
-			"minecraft:on_player_placing": {
-				"event": "rotation"
-			},
-			"minecraft:on_placed": {
-				"event": "ef:destroy"
-			},
-			"minecraft:destructible_by_mining": {
-				"seconds_to_destroy": 0.5
-			},
-			"minecraft:destructible_by_explosion": {
-				"explosion_resistance": 10
-			},
-			"minecraft:on_interact": {
-				"event": "rider"
-			}
+			"minecraft:map_color": "#5f4a2b"
 		},
 		"permutations": [
 			{
@@ -86,7 +81,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -101,7 +96,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -116,7 +111,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -131,7 +126,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -146,7 +141,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -161,7 +156,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -176,7 +171,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -191,7 +186,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -206,7 +201,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -221,7 +216,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -236,7 +231,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -251,7 +246,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -266,7 +261,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -281,7 +276,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -296,7 +291,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -311,7 +306,7 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "couch_base_acacia",
+							"texture": "couch_base_birch",
 							"render_method": "alpha_test"
 						},
 						"wool_red": {
@@ -322,9 +317,8 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ef:rotation') == 0",
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north' ",
 				"components": {
-					"tag:office_desk_connect0": {},
 					"minecraft:transformation": {
 						"rotation": [
 							0,
@@ -335,9 +329,8 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ef:rotation') == 1",
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south' ",
 				"components": {
-					"tag:office_desk_connect1": {},
 					"minecraft:transformation": {
 						"rotation": [
 							0,
@@ -348,22 +341,8 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ef:rotation') == 2",
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east' ",
 				"components": {
-					"tag:office_desk_connect2": {},
-					"minecraft:transformation": {
-						"rotation": [
-							0,
-							270,
-							0
-						]
-					}
-				}
-			},
-			{
-				"condition": "q.block_state('ef:rotation') == 3",
-				"components": {
-					"tag:office_desk_connect3": {},
 					"minecraft:transformation": {
 						"rotation": [
 							0,
@@ -374,376 +353,17 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ef:office_desk_connect') == 1",
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west' ",
 				"components": {
-					"minecraft:on_placed": {
-						"event": "event:nothing"
-					},
-					"tag:desk_corner": {}
-				}
-			},
-			{
-				"condition": "q.block_state('ef:office_desk_connect') == 2",
-				"components": {
-					"tag:couch_middle": {},
-					"minecraft:on_placed": {
-						"event": "event:nothing"
-					}
-				}
-			},
-			{
-				"condition": "q.block_state('ef:office_desk_connect') == 3",
-				"components": {
-					"tag:couch_left": {},
-					"minecraft:on_placed": {
-						"event": "event:nothing"
-					}
-				}
-			},
-			{
-				"condition": "q.block_state('ef:office_desk_connect') == 4",
-				"components": {
-					"tag:couch_right": {},
-					"minecraft:on_placed": {
-						"event": "event:nothing"
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
 					}
 				}
 			}
-		],
-		"events": {
-
-			"rider": {
-				"sequence": [
-					{
-						"run_command": {
-							"command": [
-								"summon ef:sit ~ ~ ~",
-								"execute as @e[type=ef:sit,c=1] run tp @s ~~~ facing @p"
-							]
-						},
-						"trigger": {
-							"event": "set_rider"
-						}
-					}
-				]
-			},
-			"set_rider": {
-				"run_command": {
-					"command": [
-						"ride @p start_riding @e[type=ef:sit,c=1] teleport_rider"
-					],
-					"target": "other"
-				}
-			},
-			"ef:office_desk_connect": {
-				"sequence": [
-					{
-						"condition": "q.block_state('ef:rotation')==0&&q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect0')",
-						"set_block_state": {
-							"ef:office_desk_connect": 4
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==0&&q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect0')",
-						"set_block_state": {
-							"ef:office_desk_connect": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==0&&q.block_neighbor_has_any_tag(1,0,0,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 4
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==0&&q.block_neighbor_has_any_tag(-1,0,0,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==0&&q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect0')&&q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect0')",
-						"set_block_state": {
-							"ef:office_desk_connect": 2
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==0&&q.block_neighbor_has_any_tag(-1,0,0,'desk_corner')&&q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect0')",
-						"set_block_state": {
-							"ef:office_desk_connect": 2
-						}
-					},
-					{
-						"condition": "q.block_state('ef:office_desk_connect')==4&&q.block_state('ef:rotation')==0&&!q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect0')&&!q.block_neighbor_has_any_tag(1,0,0,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 0
-						}
-					},
-					{
-						"condition": "q.block_state('ef:office_desk_connect')==3&&q.block_state('ef:rotation')==0&&!q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect0')&&!q.block_neighbor_has_any_tag(-1,0,0,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 0
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==1&&q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect1')",
-						"set_block_state": {
-							"ef:office_desk_connect": 4
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==1&&q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect1')",
-						"set_block_state": {
-							"ef:office_desk_connect": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==1&&q.block_neighbor_has_any_tag(-1,0,0,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 4
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==1&&q.block_neighbor_has_any_tag(1,0,0,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==1&&q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect1')&&q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect1')",
-						"set_block_state": {
-							"ef:office_desk_connect": 2
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==1&&q.block_neighbor_has_any_tag(1,0,0,'desk_corner')&&q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect1')",
-						"set_block_state": {
-							"ef:office_desk_connect": 2
-						}
-					},
-					{
-						"condition": "q.block_state('ef:office_desk_connect')==4&&q.block_state('ef:rotation')==1&&!q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect1')&&!q.block_neighbor_has_any_tag(-1,0,0,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 0
-						}
-					},
-					{
-						"condition": "q.block_state('ef:office_desk_connect')==3&&q.block_state('ef:rotation')==1&&!q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect1')&&!q.block_neighbor_has_any_tag(1,0,0,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 0
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==2&&q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect2')",
-						"set_block_state": {
-							"ef:office_desk_connect": 4
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==2&&q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect2')",
-						"set_block_state": {
-							"ef:office_desk_connect": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==2&&q.block_neighbor_has_any_tag(0,0,-1,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 4
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==2&&q.block_neighbor_has_any_tag(0,0,1,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==2&&q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect2')&&q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect2')",
-						"set_block_state": {
-							"ef:office_desk_connect": 2
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==2&&q.block_neighbor_has_any_tag(0,0,1,'desk_corner')&&q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect2')",
-						"set_block_state": {
-							"ef:office_desk_connect": 2
-						}
-					},
-					{
-						"condition": "q.block_state('ef:office_desk_connect')==4&&q.block_state('ef:rotation')==2&&!q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect2')&&!q.block_neighbor_has_any_tag(0,0,-1,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 0
-						}
-					},
-					{
-						"condition": "q.block_state('ef:office_desk_connect')==3&&q.block_state('ef:rotation')==2&&!q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect2')&&!q.block_neighbor_has_any_tag(0,0,1,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 0
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==3&&q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect3')",
-						"set_block_state": {
-							"ef:office_desk_connect": 4
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==3&&q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect3')",
-						"set_block_state": {
-							"ef:office_desk_connect": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==3&&q.block_neighbor_has_any_tag(0,0,1,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 4
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==3&&q.block_neighbor_has_any_tag(0,0,-1,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==3&&q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect3')&&q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect3')",
-						"set_block_state": {
-							"ef:office_desk_connect": 2
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==3&&q.block_neighbor_has_any_tag(0,0,-1,'desk_corner')&&q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect3')",
-						"set_block_state": {
-							"ef:office_desk_connect": 2
-						}
-					},
-					{
-						"condition": "q.block_state('ef:office_desk_connect')==4&&q.block_state('ef:rotation')==3&&!q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect3')&&!q.block_neighbor_has_any_tag(0,0,1,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 0
-						}
-					},
-					{
-						"condition": "q.block_state('ef:office_desk_connect')==3&&q.block_state('ef:rotation')==3&&!q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect3')&&!q.block_neighbor_has_any_tag(0,0,-1,'desk_corner')",
-						"set_block_state": {
-							"ef:office_desk_connect": 0
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==0&&q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect0')&&q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect3')",
-						"set_block_state": {
-							"ef:office_desk_connect": 1
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==0&&q.block_state('ef:office_desk_connect')==1&&q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect0')&&!q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect3')",
-						"set_block_state": {
-							"ef:office_desk_connect": 0
-						}
-					},
-					{
-						"condition": "q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect3')&&!q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect0')&&q.block_state('ef:rotation')==0&&q.block_state('ef:office_desk_connect')==1",
-						"set_block_state": {
-							"ef:office_desk_connect": 0,
-							"ef:rotation": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==3&&q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect0')&&q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect3')",
-						"set_block_state": {
-							"ef:office_desk_connect": 1,
-							"ef:rotation": 0
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==0&&q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect0')&&q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect2')",
-						"set_block_state": {
-							"ef:office_desk_connect": 1,
-							"ef:rotation": 2
-						}
-					},
-					{
-						"condition": "!q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect2')&&q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect0')&&q.block_state('ef:rotation')==2&&q.block_state('ef:office_desk_connect')==1",
-						"set_block_state": {
-							"ef:office_desk_connect": 0,
-							"ef:rotation": 0
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==2&&q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect0')&&q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect2')",
-						"set_block_state": {
-							"ef:office_desk_connect": 1,
-							"ef:rotation": 2
-						}
-					},
-					{
-						"condition": "q.block_neighbor_has_any_tag(0,0,1,'office_desk_connect2')&&!q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect0')&&q.block_state('ef:rotation')==2&&q.block_state('ef:office_desk_connect')==1",
-						"set_block_state": {
-							"ef:office_desk_connect": 0,
-							"ef:rotation": 2
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==1&&q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect1')&&q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect3')",
-						"set_block_state": {
-							"ef:office_desk_connect": 1,
-							"ef:rotation": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==3&&q.block_state('ef:office_desk_connect')==1&&q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect1')&&!q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect3')",
-						"set_block_state": {
-							"ef:office_desk_connect": 0,
-							"ef:rotation": 1
-						}
-					},
-					{
-						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect3')&&!q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect1')&&q.block_state('ef:rotation')==3&&q.block_state('ef:office_desk_connect')==1",
-						"set_block_state": {
-							"ef:office_desk_connect": 0,
-							"ef:rotation": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==3&&q.block_neighbor_has_any_tag(-1,0,0,'office_desk_connect1')&&q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect3')",
-						"set_block_state": {
-							"ef:office_desk_connect": 1,
-							"ef:rotation": 3
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==1&&q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect1')&&q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect2')",
-						"set_block_state": {
-							"ef:office_desk_connect": 1
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==1&&q.block_state('ef:office_desk_connect')==1&&q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect1')&&!q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect2')",
-						"set_block_state": {
-							"ef:office_desk_connect": 0
-						}
-					},
-					{
-						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect2')&&!q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect1')&&q.block_state('ef:rotation')==1&&q.block_state('ef:office_desk_connect')==1",
-						"set_block_state": {
-							"ef:office_desk_connect": 0,
-							"ef:rotation": 2
-						}
-					},
-					{
-						"condition": "q.block_state('ef:rotation')==2&&q.block_neighbor_has_any_tag(1,0,0,'office_desk_connect1')&&q.block_neighbor_has_any_tag(0,0,-1,'office_desk_connect2')",
-						"set_block_state": {
-							"ef:office_desk_connect": 1,
-							"ef:rotation": 1
-						}
-					}
-				]
-			},
-			"rotation": {
-				"set_block_state": {
-					"ef:rotation": "q.cardinal_facing_2d-2"
-				}
-			}
-		}
+		]
 	}
 }

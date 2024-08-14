@@ -87,6 +87,11 @@
                 "textures/items/brush_with_paint_red"
             ]
         },
+        "brush_with_paint_red_untransparent": {
+            "textures": [
+                "textures/items/brush_with_paint_red_untransparent"
+            ]
+        },
         "brush_with_paint_white": {
             "textures": [
                 "textures/items/brush_with_paint_white"
@@ -122,6 +127,16 @@
                 "textures/items/empty_brush"
             ]
         },
+        "empty_brush_untransparent": {
+            "textures": [
+                "textures/items/empty_brush_untransparent"
+            ]
+        },
+        "feldspar": {
+            "textures": [
+                "textures/items/feldspar"
+            ]
+        },
         "folk": {
             "textures": [
                 "textures/items/folk"
@@ -130,6 +145,11 @@
         "hammer": {
             "textures": [
                 "textures/items/hammer"
+            ]
+        },
+        "hammer_untransparent": {
+            "textures": [
+                "textures/items/hammer_untransparent"
             ]
         },
         "paintbrush": {
@@ -215,6 +235,16 @@
         "paintbrush_yellow": {
             "textures": [
                 "textures/items/paintbrush_yellow"
+            ]
+        },
+        "porcelain_clay": {
+            "textures": [
+                "textures/items/porcelain_clay"
+            ]
+        },
+        "porcelain_tile": {
+            "textures": [
+                "textures/items/porcelain_tile"
             ]
         },
         "toilet_paper": {

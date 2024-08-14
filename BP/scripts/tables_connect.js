@@ -1,6 +1,6 @@
 import { world } from '@minecraft/server';
 world.beforeEvents.worldInitialize.subscribe(eventData => {
-    eventData.blockTypeRegistry.registerCustomComponent('ff:on_tick', {
+    eventData.blockComponentRegistry.registerCustomComponent('ff:on_tick', {
         onTick(e) {
             const { block } = e;
             const north = block.north();

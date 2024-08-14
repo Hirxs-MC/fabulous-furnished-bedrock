@@ -1,0 +1,19 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ff:porcelain_tile",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "porcelain_tile"
+			},
+			"minecraft:creative_category": {
+				"parent": "equipment"
+			},
+			"minecraft:max_stack_size": 64
+		},
+		"events": {}
+	}
+}
