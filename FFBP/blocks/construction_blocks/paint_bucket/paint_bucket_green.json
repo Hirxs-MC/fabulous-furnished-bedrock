@@ -20,8 +20,7 @@
                 }
             },
             "menu_category": {
-                "category": "construction",
-                "group": "itemGroup.name.Items"
+                "category": "construction"
             }
         },
         "components": {
@@ -74,7 +73,7 @@
                 ]
             },
             "minecraft:custom_components": [
-                "ff:light_green_bucket_function"
+                "ff:green_bucket_function"
             ]
         },
         "permutations": [

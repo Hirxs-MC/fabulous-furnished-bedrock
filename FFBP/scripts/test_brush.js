@@ -10,7 +10,13 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const equipment = e.source.getComponent('equippable');
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
+            // /setblock ~ ~ ~ cauldron["cauldron_liquid"="water","fill_level"=6]
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
 
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 e.source.playSound("note.bass");
                 e.source.runCommand("title @s actionbar §6 Lol, you cannot assign the same color to the block")
@@ -273,6 +279,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const orangewhite = e.block.permutation.withState("ef:colors", 1)
 
@@ -364,6 +376,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const magentawhite = e.block.permutation.withState("ef:colors", 2)
 
@@ -455,6 +473,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const light_bluewhite = e.block.permutation.withState("ef:colors", 3)
 
@@ -546,6 +570,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const yellowwhite = e.block.permutation.withState("ef:colors", 4)
 
@@ -637,6 +667,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const limewhite = e.block.permutation.withState("ef:colors", 5)
 
@@ -728,6 +764,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const pinkwhite = e.block.permutation.withState("ef:colors", 6)
 
@@ -819,6 +861,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const graywhite = e.block.permutation.withState("ef:colors", 7)
 
@@ -910,6 +958,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const light_graywhite = e.block.permutation.withState("ef:colors", 8)
 
@@ -1001,6 +1055,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const cyanwhite = e.block.permutation.withState("ef:colors", 9)
 
@@ -1092,6 +1152,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const purplewhite = e.block.permutation.withState("ef:colors", 10)
 
@@ -1183,6 +1249,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const bluewhite = e.block.permutation.withState("ef:colors", 11)
 
@@ -1274,6 +1346,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const brownwhite = e.block.permutation.withState("ef:colors", 12)
 
@@ -1365,6 +1443,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const greenwhite = e.block.permutation.withState("ef:colors", 13)
 
@@ -1456,6 +1540,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const redwhite = e.block.permutation.withState("ef:colors", 14)
 
@@ -1547,6 +1637,12 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const selectedItem = equipment.getEquipment('Mainhand');
             const durability = selectedItem.getComponent('durability');
             const warning = block.permutation.getState("ef:colors") && e.source.runCommand("title @s actionbar §6 Ops! this block already has a paint assigned");
+            if (block.permutation.getState("cauldron_liquid") === "water" && block.permutation.getState("fill_level") >= 6) {
+                e.source.playSound("mob.axolotl.splash");
+
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                return;
+            }
             if (block.permutation.getState("ef:colors") === 0) {
                 const blackwhite = e.block.permutation.withState("ef:colors", 15)
 

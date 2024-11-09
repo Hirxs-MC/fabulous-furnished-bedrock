@@ -603,6 +603,7 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             }
             if (block.permutation.getState("ff:outlet_function") === 3) {
                 block.dimension.runCommand(`summon ender_crystal ${x} ${y} ${z} 0 0 minecraft:crystal_explode`);
+                block.dimension.runCommand(`setblock ${x} ${y} ${z} air`)
                 block.dimension.spawnParticle("ff:elec_folk", { x: block.location.x + 0.5, y: block.location.y + 0.5, z: block.location.z + 0.5 });
                 block.dimension.spawnParticle("ff:smoke_folk", { x: block.location.x + 0.5, y: block.location.y + 0.5, z: block.location.z + 0.5 });
                 return;
@@ -689,4 +690,52 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
 
         },
     });
+});
+
+const wooden_support_verticalTag = 'ff:wooden_support_vertical';
+class wooden_support_vertical_Manager {
+    static updatewooden_support_verticalsAround(block) {
+        let aboveBlock = undefined;
+        try {
+            aboveBlock = block.above(1);
+        } catch { }
+        let belowBlock = undefined;
+        try {
+            belowBlock = block.below(1);
+        } catch { }
+        const blocks = [
+            aboveBlock,
+            belowBlock,
+            block
+        ];
+        for (const wooden_support_vertical of blocks) {
+            if (wooden_support_vertical != undefined && wooden_support_vertical.hasTag(wooden_support_verticalTag)) this.updatewooden_support_vertical(wooden_support_vertical);
+        }
+    }
+    static updatewooden_support_vertical(block) {
+        let aboveBlock = undefined;
+        try {
+            aboveBlock = block.above(1);
+        } catch { }
+        let belowBlock = undefined;
+        try {
+            belowBlock = block.below(1);
+        } catch { }
+        if (aboveBlock != undefined) {
+            if (aboveBlock.hasTag(wooden_support_verticalTag)) {
+                block.setPermutation(block.permutation.withState("ff:top_bit", true));
+            } else block.setPermutation(block.permutation.withState("ff:top_bit", false));
+        } else block.setPermutation(block.permutation.withState("ff:top_bit", false));
+        if (belowBlock != undefined) {
+            if (belowBlock.hasTag(wooden_support_verticalTag)) {
+                block.setPermutation(block.permutation.withState("ff:bottom_bit", true));
+            } else block.setPermutation(block.permutation.withState("ff:bottom_bit", false));
+        } else block.setPermutation(block.permutation.withState("ff:bottom_bit", false));
+    }
+}
+world.afterEvents.playerBreakBlock.subscribe((data) => {
+    wooden_support_vertical_Manager.updatewooden_support_verticalsAround(data.block);
+});
+world.afterEvents.playerPlaceBlock.subscribe((data) => {
+    wooden_support_vertical_Manager.updatewooden_support_verticalsAround(data.block);
 });

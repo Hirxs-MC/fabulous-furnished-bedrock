@@ -142,8 +142,6 @@ world.afterEvents.playerPlaceBlock.subscribe((e) => {
                 }
             }
         };
-        if (block.typeId.endsWith('based_grandfather_clock')) block.above().setPermutation(BlockPermutation.resolve('minecraft:air'));
-        block.setPermutation(BlockPermutation.resolve('minecraft:air'));
     }
 });
 function normalizeAndRotate(d) {

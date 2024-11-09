@@ -14,7 +14,7 @@
 		}
 	},
 	"header": {
-		"name": "Fabulous Furnished - BETA #3.5 - Hirx's",
+		"name": "Fabulous Furnished - BETA #3.6 - Hirx's",
 		"description": "Make your world fabulous with fabulous furniture! More than 30+ blocks with more than 200+ variations available!",
 		"min_engine_version": [
 			1,
@@ -24,8 +24,8 @@
 		"uuid": "78be9f2f-f073-42a1-b95d-5f9d9276a07d",
 		"version": [
 			1,
-			4,
-			0
+				3,
+				6
 		]
 	},
 	"modules": [
@@ -34,8 +34,8 @@
 			"uuid": "f1ed61b5-8caf-4ebb-8ab8-1999629f4aaa",
 			"version": [
 				1,
-				4,
-				0
+				3,
+				6
 			]
 		},
 		{
@@ -45,8 +45,8 @@
 			"entry": "scripts/main.js",
 			"version": [
 				1,
-				4,
-				0
+				3,
+				6
 			]
 		}
 	],
@@ -55,8 +55,8 @@
 			"uuid": "a10e01d2-5913-4171-a1a5-748f912fcecc",
 			"version": [
 				1,
-				4,
-				0
+				3,
+				6
 			]
 		},
 		{

@@ -11,19 +11,19 @@
 					0,
 					1
 				],
-				"ff:north_picket": [
+				"ff:north_block_connection": [
 					0,
 					1
 				],
-				"ff:south_picket": [
+				"ff:south_block_connection": [
 					0,
 					1
 				],
-				"ff:east_picket": [
+				"ff:east_block_connection": [
 					0,
 					1
 				],
-				"ff:west_picket": [
+				"ff:west_block_connection": [
 					0,
 					1
 				]
@@ -31,43 +31,7 @@
 		},
 		"permutations": [
 			{
-				"condition": "q.block_state('ff:north_picket') && !q.block_state('ff:south_picket') && !q.block_state('ff:west_picket') && q.block_state('ff:east_picket')",
-				"components": {
-					"minecraft:material_instances": {
-						"*": {
-							"texture": "new_jungle_table",
-							"render_method": "alpha_test"
-						}
-					},
-					"minecraft:geometry": "geometry.wooden.table.corner2"
-				}
-			},
-			{
-				"condition": "q.block_state('ff:north_picket') && !q.block_state('ff:south_picket') && q.block_state('ff:west_picket') && !q.block_state('ff:east_picket')",
-				"components": {
-					"minecraft:material_instances": {
-						"*": {
-							"texture": "new_jungle_table",
-							"render_method": "alpha_test"
-						}
-					},
-					"minecraft:geometry": "geometry.wooden.table.corner1"
-				}
-			},
-			{
-				"condition": "!q.block_state('ff:north_picket') && q.block_state('ff:south_picket') && !q.block_state('ff:west_picket') && q.block_state('ff:east_picket')",
-				"components": {
-					"minecraft:material_instances": {
-						"*": {
-							"texture": "new_jungle_table",
-							"render_method": "alpha_test"
-						}
-					},
-					"minecraft:geometry": "geometry.wooden.table.corner3"
-				}
-			},
-			{
-				"condition": "!q.block_state('ff:north_picket') && q.block_state('ff:south_picket') && q.block_state('ff:west_picket') && !q.block_state('ff:east_picket')",
+				"condition": "q.block_state('ff:north_block_connection') && !q.block_state('ff:south_block_connection') && !q.block_state('ff:west_block_connection') && q.block_state('ff:east_block_connection')",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -79,7 +43,43 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ff:north_picket') && q.block_state('ff:south_picket') && q.block_state('ff:west_picket') && q.block_state('ff:east_picket')",
+				"condition": "q.block_state('ff:north_block_connection') && !q.block_state('ff:south_block_connection') && q.block_state('ff:west_block_connection') && !q.block_state('ff:east_block_connection')",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "new_jungle_table",
+							"render_method": "alpha_test"
+						} 
+					},
+					"minecraft:geometry": "geometry.wooden.table.corner3"
+				}
+			},
+			{
+				"condition": "!q.block_state('ff:north_block_connection') && q.block_state('ff:south_block_connection') && !q.block_state('ff:west_block_connection') && q.block_state('ff:east_block_connection')",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "new_jungle_table",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.wooden.table.corner1"
+				}
+			},
+			{
+				"condition": "!q.block_state('ff:north_block_connection') && q.block_state('ff:south_block_connection') && q.block_state('ff:west_block_connection') && !q.block_state('ff:east_block_connection')",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "new_jungle_table",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.wooden.table.corner2"
+				}
+			},
+			{
+				"condition": "q.block_state('ff:north_block_connection') && q.block_state('ff:south_block_connection') && q.block_state('ff:west_block_connection') && q.block_state('ff:east_block_connection')",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -91,7 +91,7 @@
 				}
 			},
 			{
-				"condition": "!q.block_state('ff:north_picket') && !q.block_state('ff:south_picket') && !q.block_state('ff:west_picket') && !q.block_state('ff:east_picket')",
+				"condition": "!q.block_state('ff:north_block_connection') && !q.block_state('ff:south_block_connection') && !q.block_state('ff:west_block_connection') && !q.block_state('ff:east_block_connection')",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -103,7 +103,19 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ff:north_picket') && q.block_state('ff:south_picket') && q.block_state('ff:west_picket') && !q.block_state('ff:east_picket')",
+				"condition": "q.block_state('ff:north_block_connection') && q.block_state('ff:south_block_connection') && q.block_state('ff:west_block_connection') && !q.block_state('ff:east_block_connection')",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "new_jungle_table",
+							"render_method": "alpha_test"
+						} 
+					},
+					"minecraft:geometry": "geometry.wooden.table.center_north_east_south"
+				}
+			},
+			{
+				"condition": "q.block_state('ff:north_block_connection') && q.block_state('ff:south_block_connection') && !q.block_state('ff:west_block_connection') && q.block_state('ff:east_block_connection')",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -115,31 +127,7 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ff:north_picket') && q.block_state('ff:south_picket') && !q.block_state('ff:west_picket') && q.block_state('ff:east_picket')",
-				"components": {
-					"minecraft:material_instances": {
-						"*": {
-							"texture": "new_jungle_table",
-							"render_method": "alpha_test"
-						}
-					},
-					"minecraft:geometry": "geometry.wooden.table.center_north_east_south"
-				}
-			},
-			{
-				"condition": "q.block_state('ff:north_picket') && !q.block_state('ff:south_picket') && q.block_state('ff:west_picket') && q.block_state('ff:east_picket')",
-				"components": {
-					"minecraft:material_instances": {
-						"*": {
-							"texture": "new_jungle_table",
-							"render_method": "alpha_test"
-						}
-					},
-					"minecraft:geometry": "geometry.wooden.table.center_north_east_west"
-				}
-			},
-			{
-				"condition": "!q.block_state('ff:north_picket') && q.block_state('ff:south_picket') && q.block_state('ff:west_picket') && q.block_state('ff:east_picket')",
+				"condition": "q.block_state('ff:north_block_connection') && !q.block_state('ff:south_block_connection') && q.block_state('ff:west_block_connection') && q.block_state('ff:east_block_connection')",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -151,7 +139,7 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ff:north_picket') && !q.block_state('ff:south_picket') && !q.block_state('ff:west_picket') && !q.block_state('ff:east_picket')",
+				"condition": "!q.block_state('ff:north_block_connection') && q.block_state('ff:south_block_connection') && q.block_state('ff:west_block_connection') && q.block_state('ff:east_block_connection')",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -159,11 +147,11 @@
 							"render_method": "alpha_test"
 						}
 					},
-					"minecraft:geometry": "geometry.wooden.table.end1"
+					"minecraft:geometry": "geometry.wooden.table.center_north_east_west"
 				}
 			},
 			{
-				"condition": "q.block_state('ff:south_picket') && !q.block_state('ff:north_picket') && !q.block_state('ff:west_picket') && !q.block_state('ff:east_picket')",
+				"condition": "q.block_state('ff:north_block_connection') && !q.block_state('ff:south_block_connection') && !q.block_state('ff:west_block_connection') && !q.block_state('ff:east_block_connection')",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -175,7 +163,7 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ff:east_picket') && !q.block_state('ff:west_picket') && !q.block_state('ff:north_picket') && !q.block_state('ff:south_picket')",
+				"condition": "q.block_state('ff:south_block_connection') && !q.block_state('ff:north_block_connection') && !q.block_state('ff:west_block_connection') && !q.block_state('ff:east_block_connection')",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -183,11 +171,11 @@
 							"render_method": "alpha_test"
 						}
 					},
-					"minecraft:geometry": "geometry.wooden.table.end2"
+					"minecraft:geometry": "geometry.wooden.table.end1"
 				}
 			},
 			{
-				"condition": "q.block_state('ff:west_picket') && !q.block_state('ff:east_picket') && !q.block_state('ff:north_picket') && !q.block_state('ff:south_picket')",
+				"condition": "q.block_state('ff:east_block_connection') && !q.block_state('ff:west_block_connection') && !q.block_state('ff:north_block_connection') && !q.block_state('ff:south_block_connection')",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -199,7 +187,19 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ff:north_picket') && q.block_state('ff:south_picket') && !q.block_state('ff:west_picket') && !q.block_state('ff:east_picket')",
+				"condition": "q.block_state('ff:west_block_connection') && !q.block_state('ff:east_block_connection') && !q.block_state('ff:north_block_connection') && !q.block_state('ff:south_block_connection')",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "new_jungle_table",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.wooden.table.end2"
+				}
+			},
+			{
+				"condition": "q.block_state('ff:north_block_connection') && q.block_state('ff:south_block_connection') && !q.block_state('ff:west_block_connection') && !q.block_state('ff:east_block_connection')",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -211,7 +211,7 @@
 				}
 			},
 			{
-				"condition": "!q.block_state('ff:north_picket') && !q.block_state('ff:south_picket') && q.block_state('ff:west_picket') && q.block_state('ff:east_picket')",
+				"condition": "!q.block_state('ff:north_block_connection') && !q.block_state('ff:south_block_connection') && q.block_state('ff:west_block_connection') && q.block_state('ff:east_block_connection')",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {

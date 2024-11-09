@@ -9,7 +9,6 @@ world.beforeEvents.worldInitialize.subscribe((e) => {
 // Stable
 import 'blocks_cc'
 import 'trampoline_connect'
-import 'pillars_cc'
 import 'fences_cc'
 import 'cooking_cc'
 import 'colors_change/lamp_colors'

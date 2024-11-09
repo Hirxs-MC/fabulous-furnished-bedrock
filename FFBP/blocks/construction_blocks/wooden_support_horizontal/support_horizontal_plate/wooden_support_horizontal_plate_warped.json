@@ -2,7 +2,7 @@
 	"format_version": "1.20.80",
 	"minecraft:block": {
 		"description": {
-			"identifier": "ff:wooden_support_horizontal_warped",
+			"identifier": "ff:wooden_support_plate_warped",
 			"menu_category": {
 				"category": "construction"
 			}
