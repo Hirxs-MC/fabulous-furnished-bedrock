@@ -215,6 +215,31 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
 });
 
 world.beforeEvents.worldInitialize.subscribe(initEvent => {
+    initEvent.blockComponentRegistry.registerCustomComponent('ff:paint_fence', {
+        onPlayerInteract: e => {
+            const { player, block } = e;
+            const { x, y, z } = block.location;
+            const equipment = player.getComponent('equippable');
+            const selectedItem = equipment.getEquipment('Mainhand');
+            const durability = selectedItem.getComponent('durability');
+            if (selectedItem.typeId === 'ef:brush_with_paint_white') {
+                block.dimension.runCommandAsync(`setblock ${x} ${y} ${z} ff:garden_paintable_fence_oak`);
+                block.dimension.spawnParticle("ff:paint_drip_white", { x: block.location.x + 0.5, y: block.location.y + 0.5, z: block.location.z + 0.5 });
+                block.dimension.spawnParticle("ff:paint_white", { x: block.location.x + 0.5, y: block.location.y + 0.5, z: block.location.z + 0.5 });
+                player.playSound("mob.axolotl.splash");
+                if (durability && durability.damage < durability.maxDurability) {
+                    durability.damage++;
+                    equipment.setEquipment('Mainhand', selectedItem);
+                }
+                if (durability && durability.damage >= durability.maxDurability) {
+                    equipment.setEquipment('Mainhand', new ItemStack('ef:brush_empty', 1));
+                }
+            }
+        }
+    });
+});
+
+world.beforeEvents.worldInitialize.subscribe(initEvent => {
     initEvent.blockComponentRegistry.registerCustomComponent('ff:sink_open_close', {
         onPlayerInteract: e => {
             const { player, block } = e;

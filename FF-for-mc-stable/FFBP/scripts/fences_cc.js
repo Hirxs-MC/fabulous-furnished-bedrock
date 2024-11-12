@@ -119,29 +119,7 @@ world.beforeEvents.worldInitialize.subscribe(eventData => {
     });
 });
 
-world.beforeEvents.worldInitialize.subscribe(eventData => {
-    eventData.blockComponentRegistry.registerCustomComponent('ff:oak_on_interact', {
-        onPlayerInteract(e) {
-            const { block, player, face } = e;
-            const equipment = player.getComponent('equippable');
-            const selectedItem = equipment.getEquipment('Mainhand');
-            if (selectedItem && face === 'Up' && BlockTypes.get(selectedItem.typeId)) {
-                const aboveBlock = block.above();
-                if (aboveBlock.typeId === 'ff:garden_fence_oak_inventory') {
-                    aboveBlock.setType(selectedItem.typeId);
-                    if (player.getGameMode() !== "creative") {
-                        if (selectedItem.amount > 1) {
-                            selectedItem.amount -= 1;
-                            equipment.setEquipment('Mainhand', selectedItem);
-                        } else {
-                            equipment.setEquipment('Mainhand', undefined);
-                        }
-                    }
-                }
-            }
-        }
-    });
-});
+
 
 world.beforeEvents.worldInitialize.subscribe(eventData => {
     eventData.blockComponentRegistry.registerCustomComponent('ff:birch_on_interact', {

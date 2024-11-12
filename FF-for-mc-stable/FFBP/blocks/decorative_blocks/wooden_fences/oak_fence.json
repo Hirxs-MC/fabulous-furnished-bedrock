@@ -623,8 +623,9 @@
 			},
 			"minecraft:custom_components": [
 				"ff:oak_on_player_destroy",
-				"ff:oak_on_interact",
-				"ff:on_tick"
+				"ff:on_tick",
+				"ff:paint_fence"
+
 			],
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 3
