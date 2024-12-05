@@ -508,6 +508,33 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
 });
 
 world.beforeEvents.worldInitialize.subscribe(initEvent => {
+    initEvent.blockComponentRegistry.registerCustomComponent('ff:pale_add_couch', {
+        onPlayerInteract: e => {
+            const { player, block } = e;
+            const { x, y, z } = block.location;
+            const equipment = player.getComponent('equippable');
+            const selectedItem = equipment.getEquipment('Mainhand');
+            if (!player.isSneaking && selectedItem && (selectedItem.typeId === 'ff:white_cushion')) {
+                player.playSound("random.pop");
+                if (selectedItem.amount > 1) {
+                    selectedItem.amount -= 1;
+                    equipment.setEquipment('Mainhand', selectedItem);
+                } else {
+                    equipment.setEquipment('Mainhand', undefined);
+                }
+                block.dimension.runCommand(`fill ${x} ${y} ${z} ${x} ${y} ${z} ff:wooden_pale_chair_with_wool["minecraft:cardinal_direction"="north"] replace ff:wooden_pale_chair["minecraft:cardinal_direction"="north"]`);
+                block.dimension.runCommand(`fill ${x} ${y} ${z} ${x} ${y} ${z} ff:wooden_pale_chair_with_wool["minecraft:cardinal_direction"="south"] replace ff:wooden_pale_chair["minecraft:cardinal_direction"="south"]`);
+                block.dimension.runCommand(`fill ${x} ${y} ${z} ${x} ${y} ${z} ff:wooden_pale_chair_with_wool["minecraft:cardinal_direction"="east"] replace ff:wooden_pale_chair["minecraft:cardinal_direction"="east"]`);
+                block.dimension.runCommand(`fill ${x} ${y} ${z} ${x} ${y} ${z} ff:wooden_pale_chair_with_wool["minecraft:cardinal_direction"="west"] replace ff:wooden_pale_chair["minecraft:cardinal_direction"="west"]`);
+
+                return;
+            }
+        },
+    });
+});
+
+
+world.beforeEvents.worldInitialize.subscribe(initEvent => {
     initEvent.blockComponentRegistry.registerCustomComponent('ff:spruce_add_couch', {
         onPlayerInteract: e => {
             const { player, block } = e;
@@ -636,6 +663,80 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
         }
     });
 });
+
+world.beforeEvents.worldInitialize.subscribe(initEvent => {
+    initEvent.blockComponentRegistry.registerCustomComponent('ff:tv_change_channel', {
+        onPlayerInteract: e => {
+            const { player, block } = e;
+            const { x, y, z } = block.location;
+            const turn_on = block.permutation.withState("ff:channels", 1);
+            const turn_off_clear = block.permutation.withState("ff:channels", 0);
+            const turn_off_rain = block.permutation.withState("ff:channels", 0);
+            player.playSound("random.click");
+            if (block.permutation.getState("ff:channels") === 0) {
+                block.setPermutation(turn_on);
+                return;
+            }
+            if (block.permutation.getState("ff:channels") === 1) {
+                block.setPermutation(turn_off_clear);
+                return;
+            }
+            if (block.permutation.getState("ff:channels") === 2) {
+                block.setPermutation(turn_off_rain);
+                return;
+            }
+            if (block.permutation.getState("ff:channels") === 3) {
+                block.setPermutation(turn_off_rain);
+                return;
+            }
+            if (block.permutation.getState("ff:channels") === 4) {
+                block.setPermutation(turn_off_rain);
+                return;
+            }
+
+        }
+    });
+});
+
+world.beforeEvents.worldInitialize.subscribe((data) => {
+    data.blockComponentRegistry.registerCustomComponent("ff:tv_weather_channel", {
+      onTick(data) {
+        const { player, block } = data;
+        const { x, y, z } = block.location;
+        const weather_snow = block.permutation.withState("ff:channels", 4);
+        const weather_thunder = block.permutation.withState("ff:channels", 3);
+        const weather_rain = block.permutation.withState("ff:channels", 2);
+        const weather_clear = block.permutation.withState("ff:channels", 1);
+        const weather = data.dimension.getWeather()
+        if (block.permutation.getState("ff:channels") === 1 && weather === 'Rain') {
+            block.setPermutation(weather_rain);
+        }
+        if (block.permutation.getState("ff:channels") === 3 && weather === 'Rain') {
+            block.setPermutation(weather_rain);
+        }
+        if (block.permutation.getState("ff:channels") === 2 && weather === 'Thunder') {
+            block.setPermutation(weather_thunder);
+        }
+        if (block.permutation.getState("ff:channels") === 1 && weather === 'Thunder') {
+            block.setPermutation(weather_thunder);
+        }
+        if (block.permutation.getState("ff:channels") === 1 && weather === 'Snow') {
+            block.setPermutation(weather_snow);
+        }
+        if (block.permutation.getState("ff:channels") === 2 && weather === 'Clear') {
+            block.setPermutation(weather_clear);
+        }
+        if (block.permutation.getState("ff:channels") === 3 && weather === 'Clear') {
+            block.setPermutation(weather_clear);
+        }
+        if (block.permutation.getState("ff:channels") === 4 && weather === 'Clear') {
+            block.setPermutation(weather_clear);
+        }
+      },
+    });
+  });
+  
+
 
 world.beforeEvents.worldInitialize.subscribe(initEvent => {
     initEvent.blockComponentRegistry.registerCustomComponent('ff:give_breads', {

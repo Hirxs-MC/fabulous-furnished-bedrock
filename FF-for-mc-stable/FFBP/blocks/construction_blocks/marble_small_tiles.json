@@ -14,19 +14,26 @@
 					"render_method": "opaque"
 				}
 			},
+			"minecraft:tick": {
+				"interval_range": [
+					10,
+					10
+				],
+				"looping": true
+			},
 			"minecraft:map_color": "#8E693B",
-			"minecraft:destructible_by_mining": {
-				"seconds_to_destroy": 3
-			},
-			"minecraft:destructible_by_explosion": {
-				"explosion_resistance": 4
-			},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 4
+            },
 			"minecraft:light_dampening": 15,
-			"minecraft:flammable": {
-				"catch_chance_modifier": 30,
-				"destroy_chance_modifier": 30
-			},
-			"minecraft:geometry": "geometry.solid_block",
+			"minecraft:geometry": {
+                "culling": "ff:blocks_culling",
+                "identifier": "minecraft:geometry.full_block"
+            },
 			"minecraft:selection_box": {
 				"origin": [
 					-8,

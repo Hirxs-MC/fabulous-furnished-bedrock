@@ -5,14 +5,16 @@
 			"identifier": "ff:feldspar_ore"
 		},
 		"components": {
-			"minecraft:destructible_by_mining": {
-				"seconds_to_destroy": 1
-			},
-			"minecraft:destructible_by_explosion": {
-				"explosion_resistance": 1
-			},
-			"minecraft:loot": "loot_tables/feldspar_ore.json",
-			"minecraft:map_color": "#ffffff"
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"minecraft:flammable": true,
+			"minecraft:map_color": "#C89D53",
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 4
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 6
+            },
+			"minecraft:loot": "loot_tables/feldspar_ore.json"
 		}
 	}
 }

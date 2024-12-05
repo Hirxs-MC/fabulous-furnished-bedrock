@@ -229,8 +229,16 @@
 			},
 			"minecraft:flammable": {
 				"catch_chance_modifier": 5,
-				"destroy_chance_modifier": 20
+				"destroy_chance_modifier": 5
 			},
+			"tag:minecraft:is_axe_item_destructible": {},
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+			"minecraft:light_dampening": 1,
 			"minecraft:tick": {
 				"interval_range": [
 					3,
@@ -240,9 +248,6 @@
 			"minecraft:custom_components": [
 				"ff:table_connect"
 			],
-			"minecraft:destructible_by_mining": {
-				"seconds_to_destroy": 3
-			},
 			"tag:fence": {},
 			"minecraft:material_instances": {
 				"*": {

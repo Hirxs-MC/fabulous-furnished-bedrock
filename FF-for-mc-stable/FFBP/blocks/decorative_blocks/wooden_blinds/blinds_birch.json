@@ -120,17 +120,18 @@
 					3
 				]
 			},
-			"minecraft:light_dampening": 1,
 			"minecraft:flammable": {
 				"catch_chance_modifier": 5,
 				"destroy_chance_modifier": 5
 			},
-			"minecraft:destructible_by_explosion": {
-				"explosion_resistance": 3.0
-			},
-			"minecraft:destructible_by_mining": {
-				"seconds_to_destroy": 0.8
-			},
+			"tag:minecraft:is_axe_item_destructible": {},
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+			"minecraft:light_dampening": 1,
 			"minecraft:custom_components": [
 				"ff:blinds"
 			],

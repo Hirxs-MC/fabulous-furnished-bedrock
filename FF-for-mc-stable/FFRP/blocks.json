@@ -16,6 +16,10 @@
 		"sound": "wood",
 		"textures": "wooden_big_planks_acacia"
 	},
+	"ff:wooden_big_planks_pale": {
+		"sound": "wood",
+		"textures": "wooden_big_planks_pale"
+	},
 	"ff:wooden_big_planks_birch": {
 		"sound": "wood",
 		"textures": "wooden_big_planks_birch"
@@ -55,6 +59,10 @@
 	"ff:wooden_double_big_planks_acacia": {
 		"sound": "wood",
 		"textures": "wooden_double_big_planks_acacia"
+	},
+	"ff:wooden_double_big_planks_pale": {
+		"sound": "wood",
+		"textures": "wooden_double_big_planks_pale"
 	},
 	"ff:wooden_double_big_planks_birch": {
 		"sound": "wood",
@@ -96,6 +104,10 @@
 		"sound": "wood",
 		"textures": "wooden_smooth_planks_acacia"
 	},
+	"ff:wooden_smooth_planks_pale": {
+		"sound": "wood",
+		"textures": "wooden_smooth_planks_pale"
+	},
 	"ff:wooden_smooth_planks_birch": {
 		"sound": "wood",
 		"textures": "wooden_smooth_planks_birch"
@@ -131,6 +143,10 @@
 	"ff:wooden_tiled_planks_spruce": {
 		"sound": "wood",
 		"textures": "wooden_tiled_planks_spruce"
+	},
+	"ff:wooden_tiled_planks_pale": {
+		"sound": "wood",
+		"textures": "wooden_tiled_planks_pale"
 	},
 	"ff:wooden_tiled_planks_acacia": {
 		"sound": "wood",

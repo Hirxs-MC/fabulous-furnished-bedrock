@@ -133,6 +133,21 @@
                 "textures/blocks/plasma_tv_weather"
             ]
         },
+        "plasma_tv_weather_rain": {
+            "textures": [
+                "textures/blocks/plasma_tv_weather_rain"
+            ]
+        },
+        "plasma_tv_weather_snow": {
+            "textures": [
+                "textures/blocks/plasma_tv_weather_snow"
+            ]
+        },
+        "plasma_tv_weather_thunder": {
+            "textures": [
+                "textures/blocks/plasma_tv_weather_thunder"
+            ]
+        },
         "red_couch": {
             "textures": [
                 "textures/blocks/red_couch"
@@ -416,6 +431,11 @@
         "marble_cabinet_oak": {
             "textures": [
                 "textures/blocks/marble/cabinets/marble_cabinet_oak"
+            ]
+        },
+        "marble_cabinet_pale": {
+            "textures": [
+                "textures/blocks/marble/cabinets/marble_cabinet_pale"
             ]
         },
         "marble_cabinet_spruce": {
@@ -828,6 +848,11 @@
                 "textures/blocks/wooden/blinds/blinds_oak"
             ]
         },
+        "blinds_pale": {
+            "textures": [
+                "textures/blocks/wooden/blinds/blinds_pale"
+            ]
+        },
         "blinds_spruce": {
             "textures": [
                 "textures/blocks/wooden/blinds/blinds_spruce"
@@ -876,6 +901,11 @@
         "oak_cabinet": {
             "textures": [
                 "textures/blocks/wooden/cabinets/oak_cabinet"
+            ]
+        },
+        "pale_cabinet": {
+            "textures": [
+                "textures/blocks/wooden/cabinets/pale_cabinet"
             ]
         },
         "spruce_cabinet": {
@@ -946,6 +976,11 @@
         "new_oak_chair": {
             "textures": [
                 "textures/blocks/wooden/chairs/new_oak_chair"
+            ]
+        },
+        "new_pale_chair": {
+            "textures": [
+                "textures/blocks/wooden/chairs/new_pale_chair"
             ]
         },
         "new_spruce_chair": {
@@ -1093,6 +1128,11 @@
                 "textures/blocks/wooden/couchs/couch_base_oak"
             ]
         },
+        "couch_base_pale": {
+            "textures": [
+                "textures/blocks/wooden/couchs/couch_base_pale"
+            ]
+        },
         "couch_base_spruce": {
             "textures": [
                 "textures/blocks/wooden/couchs/couch_base_spruce"
@@ -1228,6 +1268,11 @@
                 "textures/blocks/wooden/fences/oak_fences"
             ]
         },
+        "pale_fences": {
+            "textures": [
+                "textures/blocks/wooden/fences/pale_fences"
+            ]
+        },
         "spruce_fences": {
             "textures": [
                 "textures/blocks/wooden/fences/spruce_fences"
@@ -1358,6 +1403,11 @@
                 "textures/blocks/wooden/frames/wooden_frame_oak"
             ]
         },
+        "wooden_frame_pale": {
+            "textures": [
+                "textures/blocks/wooden/frames/wooden_frame_pale"
+            ]
+        },
         "wooden_frame_spruce": {
             "textures": [
                 "textures/blocks/wooden/frames/wooden_frame_spruce"
@@ -1411,6 +1461,11 @@
         "kitchen_sink_marble_oak": {
             "textures": [
                 "textures/blocks/wooden/kitchen_sink/marble/kitchen_sink_marble_oak"
+            ]
+        },
+        "kitchen_sink_marble_pale": {
+            "textures": [
+                "textures/blocks/wooden/kitchen_sink/marble/kitchen_sink_marble_pale"
             ]
         },
         "kitchen_sink_marble_spruce": {
@@ -1473,6 +1528,11 @@
                 "textures/blocks/wooden/planks/wooden_big_planks/wooden_big_planks_oak"
             ]
         },
+        "wooden_big_planks_pale": {
+            "textures": [
+                "textures/blocks/wooden/planks/wooden_big_planks/wooden_big_planks_pale"
+            ]
+        },
         "wooden_big_planks_spruce": {
             "textures": [
                 "textures/blocks/wooden/planks/wooden_big_planks/wooden_big_planks_spruce"
@@ -1521,6 +1581,11 @@
         "wooden_double_big_planks_oak": {
             "textures": [
                 "textures/blocks/wooden/planks/wooden_double_big_planks/wooden_double_big_planks_oak"
+            ]
+        },
+        "wooden_double_big_planks_pale": {
+            "textures": [
+                "textures/blocks/wooden/planks/wooden_double_big_planks/wooden_double_big_planks_pale"
             ]
         },
         "wooden_double_big_planks_spruce": {
@@ -1573,6 +1638,11 @@
                 "textures/blocks/wooden/planks/wooden_planks_chiseled/wooden_chiseled_planks_1_oak"
             ]
         },
+        "wooden_chiseled_planks_1_pale": {
+            "textures": [
+                "textures/blocks/wooden/planks/wooden_planks_chiseled/wooden_chiseled_planks_1_pale"
+            ]
+        },
         "wooden_chiseled_planks_1_spruce": {
             "textures": [
                 "textures/blocks/wooden/planks/wooden_planks_chiseled/wooden_chiseled_planks_1_spruce"
@@ -1621,6 +1691,11 @@
         "wooden_chiseled_planks_2_oak": {
             "textures": [
                 "textures/blocks/wooden/planks/wooden_planks_chiseled/wooden_chiseled_planks_2_oak"
+            ]
+        },
+        "wooden_chiseled_planks_2_pale": {
+            "textures": [
+                "textures/blocks/wooden/planks/wooden_planks_chiseled/wooden_chiseled_planks_2_pale"
             ]
         },
         "wooden_chiseled_planks_2_spruce": {
@@ -1673,6 +1748,11 @@
                 "textures/blocks/wooden/planks/wooden_planks_chiseled/wooden_chiseled_planks_3_oak"
             ]
         },
+        "wooden_chiseled_planks_3_pale": {
+            "textures": [
+                "textures/blocks/wooden/planks/wooden_planks_chiseled/wooden_chiseled_planks_3_pale"
+            ]
+        },
         "wooden_chiseled_planks_3_spruce": {
             "textures": [
                 "textures/blocks/wooden/planks/wooden_planks_chiseled/wooden_chiseled_planks_3_spruce"
@@ -1721,6 +1801,11 @@
         "wooden_smooth_planks_oak": {
             "textures": [
                 "textures/blocks/wooden/planks/wooden_smooth_planks/wooden_smooth_planks_oak"
+            ]
+        },
+        "wooden_smooth_planks_pale": {
+            "textures": [
+                "textures/blocks/wooden/planks/wooden_smooth_planks/wooden_smooth_planks_pale"
             ]
         },
         "wooden_smooth_planks_spruce": {
@@ -1773,6 +1858,11 @@
                 "textures/blocks/wooden/planks/wooden_tiled_planks/wooden_tiled_planks_oak"
             ]
         },
+        "wooden_tiled_planks_pale": {
+            "textures": [
+                "textures/blocks/wooden/planks/wooden_tiled_planks/wooden_tiled_planks_pale"
+            ]
+        },
         "wooden_tiled_planks_spruce": {
             "textures": [
                 "textures/blocks/wooden/planks/wooden_tiled_planks/wooden_tiled_planks_spruce"
@@ -1821,6 +1911,11 @@
         "shelf_oak": {
             "textures": [
                 "textures/blocks/wooden/shelf/shelf_oak"
+            ]
+        },
+        "shelf_pale": {
+            "textures": [
+                "textures/blocks/wooden/shelf/shelf_pale"
             ]
         },
         "shelf_spruce": {
@@ -1953,6 +2048,11 @@
                 "textures/blocks/wooden/supports/wooden_support_oak"
             ]
         },
+        "wooden_support_pale": {
+            "textures": [
+                "textures/blocks/wooden/supports/wooden_support_pale"
+            ]
+        },
         "wooden_support_spruce": {
             "textures": [
                 "textures/blocks/wooden/supports/wooden_support_spruce"
@@ -2001,6 +2101,11 @@
         "wooden_support_horizontal_oak": {
             "textures": [
                 "textures/blocks/wooden/supports/horizontal/wooden_support_horizontal_oak"
+            ]
+        },
+        "wooden_support_horizontal_pale": {
+            "textures": [
+                "textures/blocks/wooden/supports/horizontal/wooden_support_horizontal_pale"
             ]
         },
         "wooden_support_horizontal_spruce": {
@@ -2093,6 +2198,16 @@
                 "textures/blocks/wooden/tables/new_oak_table2"
             ]
         },
+        "new_pale_table": {
+            "textures": [
+                "textures/blocks/wooden/tables/new_pale_table"
+            ]
+        },
+        "new_pale_table2": {
+            "textures": [
+                "textures/blocks/wooden/tables/new_pale_table2"
+            ]
+        },
         "new_spruce_table": {
             "textures": [
                 "textures/blocks/wooden/tables/new_spruce_table"
@@ -2153,6 +2268,11 @@
                 "textures/blocks/wooden/terrace_fences/terrace_fente_oak"
             ]
         },
+        "terrace_fente_pale": {
+            "textures": [
+                "textures/blocks/wooden/terrace_fences/terrace_fente_pale"
+            ]
+        },
         "terrace_fente_spruce": {
             "textures": [
                 "textures/blocks/wooden/terrace_fences/terrace_fente_spruce"
@@ -2201,6 +2321,11 @@
         "wall_cabinet_oak": {
             "textures": [
                 "textures/blocks/wooden/wooden_wall_cabinets/wall_cabinet_oak"
+            ]
+        },
+        "wall_cabinet_pale": {
+            "textures": [
+                "textures/blocks/wooden/wooden_wall_cabinets/wall_cabinet_pale"
             ]
         },
         "wall_cabinet_spruce": {

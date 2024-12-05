@@ -46,16 +46,18 @@
 				]
 			},
 			"minecraft:selection_box": true,
-			"minecraft:destructible_by_mining": {
-				"seconds_to_destroy": 0.4
-			},
-			"minecraft:destructible_by_explosion": {
-				"explosion_resistance": 15
-			},
 			"minecraft:flammable": {
-				"destroy_chance_modifier": 20,
-				"catch_chance_modifier": 5
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 5
 			},
+			"tag:minecraft:is_axe_item_destructible": {},
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+			"minecraft:light_dampening": 1,
 			"minecraft:geometry": {
 				"identifier": "geometry.new_oak_couch",
 				"bone_visibility": {

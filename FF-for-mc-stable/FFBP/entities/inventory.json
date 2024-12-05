@@ -77,6 +77,14 @@
 					},
 					{
 						"block": {
+							"name": "ff:wooden_cabinet_pale"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
 							"name": "ff:wooden_cabinet_warped"
 						},
 						"exited_block_event": {
@@ -150,6 +158,14 @@
 					{
 						"block": {
 							"name": "ff:wooden_marble_cabinet_acacia"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "ff:wooden_marble_cabinet_pale"
 						},
 						"exited_block_event": {
 							"event": "kill"
@@ -237,6 +253,14 @@
 					},
 					{
 						"block": {
+							"name": "ff:wooden_bedside_table_pale"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
 							"name": "ff:wooden_bedside_table_warped"
 						},
 						"exited_block_event": {
@@ -310,6 +334,14 @@
 					{
 						"block": {
 							"name": "ff:wooden_wall_cabinet_acacia"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "ff:wooden_wall_cabinet_pale"
 						},
 						"exited_block_event": {
 							"event": "kill"

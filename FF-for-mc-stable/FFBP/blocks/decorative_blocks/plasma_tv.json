@@ -14,9 +14,12 @@
 				}
 			},
 			"states": {
-				"ff:lamp_state": [
+				"ff:channels": [
 					0,
-					1
+					1,
+					2,
+					3,
+					4
 				]
 			}
 		},
@@ -70,7 +73,7 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ff:lamp_state') == 0",
+				"condition": "q.block_state('ff:channels') == 0",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
@@ -83,7 +86,7 @@
 				}
 			},
 			{
-				"condition": "q.block_state('ff:lamp_state') == 1",
+				"condition": "q.block_state('ff:channels') == 1",
 				"components": {
 					"minecraft:light_emission": 11,
 					"minecraft:material_instances": {
@@ -95,16 +98,68 @@
 						}
 					}
 				}
+			},
+			{
+				"condition": "q.block_state('ff:channels') == 2",
+				"components": {
+					"minecraft:light_emission": 11,
+					"minecraft:material_instances": {
+						"*": {
+							"ambient_occlusion": false,
+							"face_dimming": false,
+							"texture": "plasma_tv_weather_rain",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('ff:channels') == 3",
+				"components": {
+					"minecraft:light_emission": 11,
+					"minecraft:material_instances": {
+						"*": {
+							"ambient_occlusion": false,
+							"face_dimming": false,
+							"texture": "plasma_tv_weather_thunder",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('ff:channels') == 4",
+				"components": {
+					"minecraft:light_emission": 11,
+					"minecraft:material_instances": {
+						"*": {
+							"ambient_occlusion": false,
+							"face_dimming": false,
+							"texture": "plasma_tv_weather_snow",
+							"render_method": "alpha_test"
+						}
+					}
+				}
 			}
 		],
 		"components": {
+			"minecraft:tick": {
+				"interval_range": [
+					10,
+					10
+				],
+				"looping": true
+			},
 			"minecraft:geometry": {
 				"identifier": "geometry.plasma_tv"
 			},
-			"minecraft:flammable": {
-				"catch_chance_modifier": 30,
-				"destroy_chance_modifier": 100
-			},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            },
 			"minecraft:light_dampening": 15,
 			"minecraft:collision_box": {
 				"origin": [
@@ -131,7 +186,8 @@
 				]
 			},
 			"minecraft:custom_components": [
-				"ff:interactive_block"
+				"ff:tv_change_channel",
+				"ff:tv_weather_channel"
 			],
 			"minecraft:material_instances": {
 				"*": {

@@ -5,23 +5,28 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
         onPlayerInteract: e => {
             const { player, block } = e;
             const { x, y, z } = block.location;
-            // white
+            // white 
+            block.dimension.runCommandAsync(`execute at @e[type=ff:ff_light_ray_small] positioned ${x} ${y} ${z} run event entity @e[r=0.5] destroy`);
             if (block.permutation.getState("ef:colors") === 0 && block.permutation.getState("minecraft:cardinal_direction") === "north") {
+                
                 block.dimension.runCommand(`setblock ${x} ${y} ${z} ff:small_lamp["minecraft:cardinal_direction"="north","ef:colors"=0]`);
                 player.playSound("ff:lamp_on");
                 return;
             }
             if (block.permutation.getState("ef:colors") === 0 && block.permutation.getState("minecraft:cardinal_direction") === "south") {
+                
                 block.dimension.runCommand(`setblock ${x} ${y} ${z} ff:small_lamp["minecraft:cardinal_direction"="south","ef:colors"=0]`);
                 player.playSound("ff:lamp_on");
                 return;
             }
             if (block.permutation.getState("ef:colors") === 0 && block.permutation.getState("minecraft:cardinal_direction") === "west") {
+                
                 block.dimension.runCommand(`setblock ${x} ${y} ${z} ff:small_lamp["minecraft:cardinal_direction"="west","ef:colors"=0]`);
                 player.playSound("ff:lamp_on");
                 return;
             }
             if (block.permutation.getState("ef:colors") === 0 && block.permutation.getState("minecraft:cardinal_direction") === "east") {
+                
                 block.dimension.runCommand(`setblock ${x} ${y} ${z} ff:small_lamp["minecraft:cardinal_direction"="east","ef:colors"=0]`);
                 player.playSound("ff:lamp_on");
                 return;
@@ -341,6 +346,11 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
                 player.playSound("ff:lamp_on");
                 return;
             }
+        },
+        onTick: e => {
+            const { player, block } = e;
+            const { x, y, z } = block.location;
+            block.dimension.spawnParticle("ff:ff_light_ray_small", { x: block.location.x + 0.5, y: block.location.y + 0.5, z: block.location.z + 0.5 });
         }
     });
 });
@@ -352,21 +362,25 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             const { x, y, z } = block.location;
             // white
             if (block.permutation.getState("ef:colors") === 0 && block.permutation.getState("minecraft:cardinal_direction") === "north") {
+                                block.dimension.runCommandAsync(`summon ff:ff_light_ray_small ${x} ${y} ${z}`);
                 block.dimension.runCommand(`setblock ${x} ${y} ${z} ff:small_lamp_on["minecraft:cardinal_direction"="north","ef:colors"=0]`);
                 player.playSound("ff:lamp_on");
                 return;
             }
             if (block.permutation.getState("ef:colors") === 0 && block.permutation.getState("minecraft:cardinal_direction") === "south") {
+                                block.dimension.runCommandAsync(`summon ff:ff_light_ray_small ${x} ${y} ${z}`);
                 block.dimension.runCommand(`setblock ${x} ${y} ${z} ff:small_lamp_on["minecraft:cardinal_direction"="south","ef:colors"=0]`);
                 player.playSound("ff:lamp_on");
                 return;
             }
             if (block.permutation.getState("ef:colors") === 0 && block.permutation.getState("minecraft:cardinal_direction") === "west") {
+                                block.dimension.runCommandAsync(`summon ff:ff_light_ray_small ${x} ${y} ${z}`);
                 block.dimension.runCommand(`setblock ${x} ${y} ${z} ff:small_lamp_on["minecraft:cardinal_direction"="west","ef:colors"=0]`);
                 player.playSound("ff:lamp_on");
                 return;
             }
             if (block.permutation.getState("ef:colors") === 0 && block.permutation.getState("minecraft:cardinal_direction") === "east") {
+                                block.dimension.runCommandAsync(`summon ff:ff_light_ray_small ${x} ${y} ${z}`);
                 block.dimension.runCommand(`setblock ${x} ${y} ${z} ff:small_lamp_on["minecraft:cardinal_direction"="east","ef:colors"=0]`);
                 player.playSound("ff:lamp_on");
                 return;

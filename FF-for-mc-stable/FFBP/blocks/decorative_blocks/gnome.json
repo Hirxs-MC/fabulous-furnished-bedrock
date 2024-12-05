@@ -60,16 +60,13 @@
 				}
 			},
 			"minecraft:map_color": "#8E693B",
-			"minecraft:destructible_by_mining": {
-				"seconds_to_destroy": 2
-			},
-			"minecraft:destructible_by_explosion": {
-				"explosion_resistance": 4
-			},
-			"minecraft:flammable": {
-				"catch_chance_modifier": 30,
-				"destroy_chance_modifier": 30
-			},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            },
 			"minecraft:geometry": "geometry.gnome",
 			"minecraft:selection_box": {
 				"origin": [

@@ -338,6 +338,12 @@
 					"render_method": "alpha_test",
 					"ambient_occlusion": false
 				}
+			},
+			"minecraft:tick": {
+				"interval_range": [
+					7,
+					10
+				]
 			}
 		}
 	}
